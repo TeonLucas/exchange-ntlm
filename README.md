@@ -1,6 +1,6 @@
 ## exchange-ntlm
 
-### Quickstart to directly access Microsoft Exchange on Linux in Go Language
+### Quickstart to use Microsoft Exchange from Go Language (without Windows)
 
 Outlook web services is a SOAP based protocol that uses the NT LAN Manager (NTLM) suite of Microsoft security protocols for authentication, integrity, and confidentiality. The libraries to authenticate with NTLM come built-in with the Windows operating system Security Support Provider Interface (SSPI) api.  On Linux, you'll need a library to re-implement this protocol.
 
