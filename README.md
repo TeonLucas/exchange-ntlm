@@ -4,9 +4,9 @@
 
 Outlook web services is a SOAP based protocol that uses the NT LAN Manager (NTLM) suite of Microsoft security protocols for authentication, integrity, and confidentiality. The libraries to authenticate with NTLM come built-in with the Windows operating system Security Support Provider Interface (SSPI) api.  On Linux, you'll need a library to re-implement this protocol.
 
-Although NTLM is used over HTTP, it employs HTTP status codes and headers in its own way, not strictly following HTTP conventions. Your best bet to get in to your Exchange server from Linux, of course, is to reconfigure that server to allow other authentication protocols, so you don't have to use NTLM.
+Although NTLM is used over HTTP, it employs HTTP status codes and headers in its own way, not strictly following HTTP conventions. The easiest way to access your Exchange server from Linux, of course, is to reconfigure that server to allow other authentication protocols, so you don't have to use NTLM.
 
-But let's say you are programming in Go-language, your Exchange server is already locked down with NTLM, yet you want to get in.  Hopefully this project might speed your research to get going quicker. 
+But let's say you are programming in Go-language, your Exchange server is already locked down with NTLM, and you want to get in.  Hopefully this project can speed your research to get going quicker. 
  
 ## What is NTLM
 
