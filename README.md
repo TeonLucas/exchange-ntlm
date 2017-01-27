@@ -79,9 +79,7 @@ Microsoft has all the XML you need nicely documented; below are some examples:
 Once I had everything working with curl, I kept going. It turns out you can actually just use the C library *libcurl* in Go:
 * https://github.com/andelf/go-curl
 
-Using a C-library means you cannot use the CGO_ENABLE=0 when you compile.  This means if you are trying to build Go for an empty container that doesn't have a full OS, you won't have all the shared libraries libcurl uses, and it may take some work to build libcurl.a statically.
-
-But for the general case, and definately to jump-start your NTLM authentication, libcurl is a really good route.
+For the general case, and definately to jump-start your NTLM authentication, libcurl is a really good route.
 
 The sample Go code in this repo does the same thing as the curl example command.
 * It uses the **go-curl** library, Copyright 2014 Shuyu Wang (<andelf@gmail.com>)
@@ -93,4 +91,15 @@ To run, clone or download this repo, and type:
 $ go get https://github.com/andelf/go-curl
 $ go build
 $ ./exchange-ntlm
+```
 
+#### Notes on using minimal containers and C-libraries in Go
+
+Using a C-library in GO means you cannot disable **cgo** when you compile.  Let's say you are trying to build with Go for an empty container, one that doesn't have a full OS.  It's nice to disable cgo (setting **CGO_ENABLE=0**) to avoid dynamic libraries becoming dependencies for you executable.  In your minimal container, the shared libraries of an OS don't exist. But that setting contradicts using a C-library in Go.
+
+You can still use libcurl in Go and link with static libraries.
+```sh
+go build --ldflags '-extldflags "-static"'
+```
+
+It just may take some work to build **libcurl.a** from scratch.
