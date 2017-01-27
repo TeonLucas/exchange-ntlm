@@ -71,7 +71,7 @@ To run the curl command to check your inbox:
 Microsoft has all the XML you need nicely documented; below are links to examples:
 
 * [FindItem operation](https://msdn.microsoft.com/en-us/library/office/aa566107(v=exchg.150).aspx#sectionSection1)
-* [GetItem operation](https://msdn.microsoft.com/en-us/library/office/aa566107(v=exchg.150).aspx#sectionSection1)
+* [GetItem operation](https://msdn.microsoft.com/en-us/library/office/aa566013(v=exchg.150).aspx#Anchor_1)
 * [FindFolder operation](https://msdn.microsoft.com/en-us/library/office/dd633627(v=exchg.80).aspx#Anchor_0)
 
 #### Libcurl in Go
