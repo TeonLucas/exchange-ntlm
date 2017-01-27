@@ -1,7 +1,15 @@
 ## exchange-ntlm
 
-### Quickstart to use Microsoft Exchange (Outlook)
-### from Go Language (without Windows)
+This is an example of using Go-language to access Microsoft Exchange WebServices (Outlook)
+
+To run, clone or download this repo, and type:
+```sh
+$ go get https://github.com/andelf/go-curl
+$ go build
+$ ./exchange-ntlm
+```
+
+### Quickstart to use Microsoft Exchange via NTLM on Linux
 
 The Microsoft Exchange WebServices is a SOAP-based api that uses the NT LAN Manager (NTLM) suite of Microsoft security protocols for authentication, integrity, and confidentiality. The libraries to authenticate with NTLM come built-in with the Windows operating system Security Support Provider Interface (SSPI) api. On Linux, you'll need a library to re-implement this protocol.
 
@@ -85,13 +93,6 @@ The sample Go code in this repo does the same thing as the curl example command.
 * It uses the **go-curl** library, Copyright 2014 Shuyu Wang (<andelf@gmail.com>)
 * You will notice you can turn on debug (which behaves just like curl -v), and watch the handshake steps proceed.
 * This makes it super easy to see if your Go program's handshake matches your curl command.
-
-To run, clone or download this repo, and type:
-```sh
-$ go get https://github.com/andelf/go-curl
-$ go build
-$ ./exchange-ntlm
-```
 
 #### Notes on using minimal containers and C-libraries in Go
 
