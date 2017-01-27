@@ -19,6 +19,7 @@ The client begins with a simple GET request to the NTLM server.  It responds wit
 #### The Handshake
 
 Next you need to work a three-part handshake as follows:
+
 1. First, the client establishes a network path to the server and sends a NEGOTIATE_MESSAGE advertising its capabilities.
 2. Next, the server responds with CHALLENGE_MESSAGE which is used to establish the identity of the client.
 3. Finally, the client responds to the challenge with an AUTHENTICATE_MESSAGE.
