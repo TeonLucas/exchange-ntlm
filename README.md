@@ -75,7 +75,7 @@ Using a C-library means you cannot use the CGO_ENABLE=0 when you compile.  This 
 But for the general case, and definately to jump-start your NTLM authentication, this is a really good route.
 
 The sample Go code in this repo does the same thing as the curl command.
-* It uses the go-curl library, Copyright 2014 Shuyu Wang <andelf@gmail.com>
+* It uses the go-curl library, Copyright 2014 Shuyu Wang (<andelf@gmail.com>)
 * You will even notice you can turn on debug in go-curl (just like curl -v), and watch the handshake steps proceed.
 * This makes it super easy to see if your go program's handshake matches your curl command.
 
