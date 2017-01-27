@@ -68,11 +68,11 @@ To run the curl command to check your inbox:
 1. Copy [finditem.xml](https://raw.githubusercontent.com/DavidSantia/exchange-ntlm/master/finditem.xml) into your current directory.
 2. Then just type the curl example shown above. 
 
-Microsoft has all the XML you need nicely documented; below are some examples:
+Microsoft has all the XML you need nicely documented; below are links to examples:
 
-* [FindItem link to docs](https://msdn.microsoft.com/en-us/library/office/aa566107(v=exchg.150).aspx#sectionSection1)
-* [GetItem link to docs](https://msdn.microsoft.com/en-us/library/office/aa566107(v=exchg.150).aspx#sectionSection1)
-* [FindFolder link to docs](https://msdn.microsoft.com/en-us/library/office/dd633627(v=exchg.80).aspx#Anchor_0)
+* [FindItem operation](https://msdn.microsoft.com/en-us/library/office/aa566107(v=exchg.150).aspx#sectionSection1)
+* [GetItem operation](https://msdn.microsoft.com/en-us/library/office/aa566107(v=exchg.150).aspx#sectionSection1)
+* [FindFolder operation](https://msdn.microsoft.com/en-us/library/office/dd633627(v=exchg.80).aspx#Anchor_0)
 
 #### Libcurl in Go
 
