@@ -62,7 +62,9 @@ Once you establish the handshake, like above, you post SOAP commands.  These are
 #### Checking your inbox
 
 The most basic command is check your inbox.  It uses the FindItem operation, which I copied into the file finditem.xml in this repo.
+
 To run the curl command to check your inbox:
+
 1. Copy [finditem.xml](https://raw.githubusercontent.com/DavidSantia/exchange-ntlm/master/finditem.xml) into your current directory.
 2. Then just type the curl example shown above. 
 
