@@ -46,7 +46,7 @@ This library is referred to a lot and has much of the parts for a native Go impl
 I tried it with an Exchange server, hacked around a bit, but didn't get it to work. I then read the fine print: "The major missing piece is the negotiation of capabilities between the client and the server, for our use we hardcoded a supported set of negotiation flags."
 
 #### Curl to the rescue
-I needed a working start point. The curl program has a cool command-line option: -ntlm
+I needed a working start point. The curl program has a cool command-line option: **-ntlm**
 
 Here is a curl example:
 ```sh
