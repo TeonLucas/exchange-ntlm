@@ -96,11 +96,11 @@ The sample Go code in this repo does the same thing as the curl example command.
 
 #### Notes on using minimal containers and C-libraries in Go
 
-Using a C-library in GO means you cannot disable **cgo** when you compile.  Let's say you are trying to build with Go for an empty container, one that doesn't have a full OS.  It's nice to disable cgo (setting **CGO_ENABLE=0**) to avoid dynamic libraries becoming dependencies for you executable.  In your minimal container, the shared libraries of an OS don't exist. But that setting contradicts using a C-library in Go.
+Using a C-library in GO means you cannot disable **cgo** when you compile.  Let's say you are trying to build with Go for an empty container, one that doesn't have a full OS.  It's nice to disable cgo (setting **CGO_ENABLE=0**) to avoid dynamic libraries becoming dependencies for you executable.  But that setting contradicts using a C-library in Go.
 
 You can still use libcurl in Go and link with static libraries.
 ```sh
 go build --ldflags '-extldflags "-static"'
 ```
-
-It just may take some work to build **libcurl.a** from scratch.
+For an example of how to build **libcurl.a** and link statically with Go, see:
+* https://github.com/DavidSantia/go-curl-static-docker
